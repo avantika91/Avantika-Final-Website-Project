@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: lightpink;
+      padding: 20px;
+    }
+    .heading {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .p1 {
+      font-size: 30px;
+      text-decoration: underline;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      font-family: auto;
+      text-decoration-thickness: 1px;
+    }
+
+    h3 {
+      text-decoration-thickness: 5px;
+      font-size: 25px;
+      color:black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+      color:black;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+    * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none;
+margin-left:150px;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+  </style>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+     
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Site | A website by me</title>
+</head>
+
+
+<body>
+  <h1 class="heading">Jaipur</h1>
+  <P style="color:black;"><b>Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is
+      popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and
+      culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas.
+      The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and
+      are a treasure-trove for the shoppers.</b></P>
+  <BR>
+  <P><b>Planned by Vidyadhar Bhattacharya, Jaipur holds the distinction of being the first planned city of India.
+      Renowned globally for its coloured gems, the capital city of Rajasthan combines the allure of its ancient history
+      with all the advantages of a metropolis. Jaipur rises up majestically against the backdrop of the forts Nahargarh,
+      Jaigarh and Garh Ganesh Temple. The bustling modern city is one of the three corners of the golden triangle that
+      includes Delhi, Agra and Jaipur.</b></P>
+  <BR>
+  <P><b>The story goes that in 1876, the Prince of Wales visited India on a tour. Since the colour pink was symbolic of
+      hospitality, Maharaja Ram Singh of Jaipur painted the entire city pink. The pink that colours the city makes for a
+      marvellous spectacle to behold.</b></P>
+  <br>
+
+
+<h2 class="p1"><b>Major Attractions:</b></h2>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+      <h3 class="slide-number">Hawa Mahal</h3>
+      <h5>In 1799, the Kachhwaha Rajput ruler, Sawai Pratap Singh, grandson of Maharaja Sawai Jai Singh ordered Lal Chand
+        Usta to construct an extension to the Royal City Palace. The Purdah system at the time was strictly followed.
+        Rajput royal ladies should not be seen by strangers or appear in any public area. The construction of Hawa Mahal
+        allows the royal ladies to enjoy from every day street scenes to royal processions on the street without being
+        seen.</h5>
+      <img src="images/HawaMahal.jpg" alt="Hawa Mahal" width="700px" height="400px" class="rounded">
+    </div>
+  <div class="mySlides fade">
+      <h3 class="slide-number">Albert Hall</h3>
+      <h5>The Albert Hall Museum in Jaipur, is the oldest museum of the state and functions as the state museum of Rajasthan, India. 
+        The building is situated in Ram Niwas garden outside the city wall opposite New gate and is a fine example of Indo-Saracenic architecture. 
+        It is also called the Government Central Museum.</h5>
+      <img src="images/AlbertHall.jpg" alt="Albert Hall" width="700px" height="400px" class="rounded">
+  </div>
+  <div class="mySlides fade">
+      <h3 class="slide-number">Amer Fort</h3>
+      <h5>Amer Fort or Amber Fort is a fort located in Amer, Rajasthan, India. Amer is a town with an area of 4 square kilometres (1.5 sq mi) located 11 kilometres (6.8 mi) from Jaipur,
+         the capital of Rajasthan.
+         The town of Amer and the Amber Fort were originally built by Raja Man Singh and additions were, later, made by Sawai Jai Singh. Located high on a hill,
+          it is the principal tourist attraction in Jaipur.</h5>
+      <img src="images/AmerFort.jpg" alt="Amer Fort" width="700px" height="400px" class="rounded">
+  </div>
+  <div class="mySlides fade">
+      <h3 class="slide-number">Jal Mahal</h3>
+      <h5>Jal Mahal (meaning "Water Palace") is a palace in the middle of the Man Sagar Lake in Jaipur city, the capital of the state of Rajasthan, India. 
+        The palace was originally constructed in 1699; the building and the lake around it were later renovated and enlarged in the 18th century by Maharaja Jai Singh II of Amber.</h5>
+      <img src="images/JalMahal.jpg" alt="Jal Mahal" width="700px" height="400px" class="rounded">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+<span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+showSlides(slideIndex);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: lightskyblue;
+      padding: 20px;
+    }
+
+    .heading {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .p1 {
+      font-size: 30px;
+      text-decoration: underline;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      font-family: auto;
+      text-decoration-thickness: 1px;
+    }
+
+    h3 {
+      text-decoration-thickness: 5px;
+      font-size: 25px;
+      color:black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+      color:black;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+    * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none;
+margin-left:150px;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+  </style>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+     
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Site | A website by me</title>
+</head>
+
+
+<body>
+  
+      <h1 class="heading">Jodhpur</h1>
+
+  
+  <p><b>Jodhpur, the second largest city in Rajasthan is popularly known as the Blue City. The name
+      is clearly befitting as most of the architecture - forts, palaces, temples, havelis and even houses are built in
+      vivid shades of blue. The strapping forts that tower this magnificent city sum up to a spectacle you would not
+      want to miss. The mammoth, imposing fortress of Mehrangarh has a landscape dominating a rocky ridge with the eight
+      gates leading out of the fortress. The new city is located outside the structure. Jodhpur is also known for the
+      rare breed of horses known as Marwari or Malani, which are only found here.</b></P>
+  <br/>
+  <p><b>Jodhpur marks its origin back to the year of 1459 AD. The history of this prosperous city revolves around the
+      Rathore clan. Rao Jodha, the chief of Rathore Clan is credited with the origin of Jodhpur in India. The city is
+      known to be built in place of the ancient capital, Mandore of the state of Manwar. Hence, the people of Jodhpur
+      and surrounding areas are commonly known as Marwaris. Also, it is believed that the relics of Mandore can still be
+      witnessed in the Mandore Gardens.</b></p>
+  <br/>
+
+
+<h2 class="p1"><b>Major Attractions:</b></h2>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+      <h3 class="slide-number">Umaid Bhawan Palace</h3>
+      <h5>Umaid Bhawan Palace, located in Jodhpur, Rajasthan, India, is one of the world's largest private residences. 
+        A part of the palace is managed by Taj Hotels. Named after Maharaja Umaid Singh, grandfather of the present owner Gaj Singh. 
+        The palace has 347 rooms and is the principal residence of the former Jodhpur royal family. A part of the palace is a museum..</h5>
+      <img src="images/Umaid Bhawan Palace.jpg" alt="Umaid Bhawan Palace" width="700px" height="400px" class="rounded">
+    </div>
+  <div class="mySlides fade">
+      <h3 class="slide-number">Mehrangarh Fort</h3>
+      <h5>Mehrangarh Fort covers an area of 1,200 acres (486 hectares) in Jodhpur, Rajasthan, India. 
+        The complex is located on a hilltop around 122 metres above the surrounding plain,[1] and was constructed circa 1459 by Rajput ruler Rao Jodha, 
+        though most of the existing structure is from the 17th century.
+         Inside its boundaries there are several palaces known for their intricate carvings and expansive courtyards, as well as a museum housing various relics. 
+         A winding road leads to and from the city below. The imprints of the impact of cannonballs fired by attacking armies of Jaipur can still be seen on the second gate. 
+         To the left of the fort is the chhatri of Kirat Singh Soda, a soldier who fell on the spot defending Mehrangarh.</h5>
+      <img src="images/Mehrangarh fort.jpg" alt="Mehrangarh Fort" width="700px" height="400px" class="rounded">
+  </div>
+  <div class="mySlides fade">
+      <h3 class="slide-number">Moti Mahal</h3>
+      <h5>Moti Mahal is the largest and brightest room of the five historic rooms present in the Mehrangarh Fort. 
+        Literally translating to mean - Palace of Pearls. It has earned this title as the finely crushed seashells and lime plaster brilliantly combine together to give it a pearly, 
+        polished look to its magnificent surface. 
+        The exquisite room is an aesthetic dream come true and is adorned with complementary design elements of gold leaves, seashells, mirrors, and the colourful windows,
+         all coming together to please the eye.</h5>
+      <img src="images/Moti Mahal.jpg" alt="Moti Mahal" width="700px" height="400px" class="rounded">
+  </div>
+  <div class="mySlides fade">
+      <h3 class="slide-number">Fort Khejarla</h3>
+      <h5>The Fort Khejarla is a magnificent example of ancient Indian architecture. Overlooking the plains of Marwar stands frozen in time. 
+        Bestowed upon Thakur Gopal Dasji in 1611 A.D for his exemplary courage and bravery against Muslim Rulers of Delhi by Rathore Rulers of Marwar, 
+        Khejarla nobles enjoyed the highest status in the court of Marwar and became one of the most important Jagirs (fiefdoms) of the state of Marwar. 
+        Nobles of Khejarla Family opened its doors for tourists, where one can expect rare experience of Rajput hospitality.</h5>
+      <img src="images/Fort khejarla.jpg" alt="Fort Khejarla" width="700px" height="400px" class="rounded">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+<span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+showSlides(slideIndex);
+</script>
+</body>
+
+</html>
